@@ -2,11 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import Car from './Car.jsx'
+import Mytodo from './Mytodo.jsx'
+ 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <Car></Car>
+    <Mytodo></Mytodo>
   </React.StrictMode>,
 )
