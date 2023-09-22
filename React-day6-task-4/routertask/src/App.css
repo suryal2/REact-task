@@ -1,0 +1,63 @@
+ .navbar{
+    height: 80px;
+    width:100%;
+    background-color:beige;
+   
+     
+ }
+ /* .atla{
+ position: absolute;
+ top:
+ } */
+   
+
+ ul{
+    display:flex;
+    list-style: none;
+ }
+ li{
+    margin-left: 25px;
+   
+ }
+ 
+ .nav-img{
+   height: 450px;
+   width:100%;
+   background-color:aliceblue;
+   text-align:center;
+
+
+ }
+ img{
+   height:350px;
+   width:100%;
+   
+
+ }
+ h2{
+   margin-top: 30px;;
+ }
+
+ .ul1{
+   margin-left:300px ;
+   margin-top:39px;
+   font-size:larger;
+   
+ }
+   .li1:hover{
+   text-decoration: none;
+   color:rgb(82, 71, 58)
+  } 
+  .li1{
+   color: rgb(45, 42, 42);
+   margin-left: 20px;
+  }
+  .backnav{
+   background-color: aliceblue;
+   height: 50px;
+   width: 100%;
+    position: relative;
+    bottom: 6px;
+    padding-bottom:0px ;
+  }
+ 
