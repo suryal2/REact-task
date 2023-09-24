@@ -1,0 +1,95 @@
+ 
+ 
+ 
+    [
+    {
+        "id": 1,
+        "title": "iPhone 9",
+        "description": "An apple mobile which is nothing like apple",
+        "price": 549,
+        "discountPercentage": 12.96,
+        "rating": 4.69,
+        "stock": 94,
+        "brand": "Apple",
+        "category": "smartphones",
+        "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/1/1.jpg",
+            "https://i.dummyjson.com/data/products/1/2.jpg",
+            "https://i.dummyjson.com/data/products/1/3.jpg",
+            "https://i.dummyjson.com/data/products/1/4.jpg",
+            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "iPhone X",
+        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+        "price": 899,
+        "discountPercentage": 17.94,
+        "rating": 4.44,
+        "stock": 34,
+        "brand": "Apple",
+        "category": "smartphones",
+        "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/2/1.jpg",
+            "https://i.dummyjson.com/data/products/2/2.jpg",
+            "https://i.dummyjson.com/data/products/2/3.jpg",
+            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Samsung Galaxy 20",
+        "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+        "price": 1249,
+        "discountPercentage": 15.46,
+        "rating": 4.09,
+        "stock": 36,
+        "brand": "Samsung",
+        "category": "smartphones",
+        "thumbnail": "data:image/jpeg;base64,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",
+        "images": [
+            "https://i.dummyjson.com/data/products/3/1.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "OPPOF19",
+        "description": "OPPO F19 is officially announced on April 2021.",
+        "price": 280,
+        "discountPercentage": 17.91,
+        "rating": 4.3,
+        "stock": 123,
+        "brand": "OPPO",
+        "category": "smartphones",
+        "thumbnail": "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/4/1.jpg",
+            "https://i.dummyjson.com/data/products/4/2.jpg",
+            "https://i.dummyjson.com/data/products/4/3.jpg",
+            "https://i.dummyjson.com/data/products/4/4.jpg",
+            "https://i.dummyjson.com/data/products/4/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Huawei P30",
+        "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+        "price": 499,
+        "discountPercentage": 10.58,
+        "rating": 4.09,
+        "stock": 32,
+        "brand": "Huawei",
+        "category": "smartphones",
+        "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/5/1.jpg",
+            "https://i.dummyjson.com/data/products/5/2.jpg",
+            "https://i.dummyjson.com/data/products/5/3.jpg"
+        ]
+    }
+]
+ 
+ 
