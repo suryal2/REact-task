@@ -7,16 +7,20 @@ import './CardF.css';
 function CardF() {
     const { count, setCount } = useContext(ShopContexts);
     const { cardcount,setcardCount } = useContext(ShopContexts);
-  
+    const { countA, setCountA } = useContext(ShopContexts);
   
     const priceIncrease = (itemPrice, itemId) => {
       const updatedItemPrices = { ...count };
       updatedItemPrices[itemId] =Math.min( (updatedItemPrices[itemId] || 0) + itemPrice ,100000 )
       setCount(updatedItemPrices);
-  
+
+       
+      setCountA(countA + itemPrice);
+      
       const updatedItemPrices1 = { ...cardcount };
       updatedItemPrices1[itemId] =  Math.min((updatedItemPrices1[itemId] || 0) + 1, 100);
       setcardCount(updatedItemPrices1); 
+
     };
   
   
@@ -33,6 +37,8 @@ function CardF() {
       updatedItemPrices1[itemId] = Math.max((updatedItemPrices1[itemId] || 0) - 1, 0);
   
       setcardCount(updatedItemPrices1); 
+
+      setCountA(countA - itemPrice);
     };
   
   
@@ -90,6 +96,7 @@ function CardF() {
             </div>
           ))}
         </div>
+        TOTEL AMOUNT:{countA}
       </div>
     );
   }
