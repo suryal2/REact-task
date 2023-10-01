@@ -15,8 +15,8 @@ function CardF() {
       setCount(updatedItemPrices);
 
        
-      setCountA(countA + itemPrice);
-      
+setCountA(countA+itemPrice) ;
+
       const updatedItemPrices1 = { ...cardcount };
       updatedItemPrices1[itemId] =  Math.min((updatedItemPrices1[itemId] || 0) + 1, 100);
       setcardCount(updatedItemPrices1); 
@@ -37,8 +37,8 @@ function CardF() {
       updatedItemPrices1[itemId] = Math.max((updatedItemPrices1[itemId] || 0) - 1, 0);
   
       setcardCount(updatedItemPrices1); 
+  setCountA(countA-itemPrice) ;
 
-      setCountA(countA - itemPrice);
     };
   
   
@@ -95,8 +95,8 @@ function CardF() {
               </div>
             </div>
           ))}
-        </div>
-        TOTEL AMOUNT:{countA}
+        </div >
+       <p className='ta'> TOTEL AMOUNT:{countA}</p>
       </div>
     );
   }
