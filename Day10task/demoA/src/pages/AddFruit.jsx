@@ -3,26 +3,36 @@ import { useRef } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
- 
+
 function AddFruit() {
   const name = useRef("");
   const username = useRef("");
   const email = useRef("");
-  const imageUrl = useRef("");
- 
+  const address = {
+    street: useRef(""),
+    city: useRef(""),
+    zipcode:useRef(""),
+  };
+
   const navigate = useNavigate();
- 
+
   const addFruitHandler = () => {
-    var payload = {
-      name:name.current.value,
-      username: username.current.value ? Number(username.current.value):0,
-      email: email.current.value ? Number(email.current.value): 0 ,
-      imageUrl: imageUrl.current.value,
+    const payload = {
+      name: name.current.value,
+      username: username.current.value ? Number(username.current.value) : 0,
+      email: email.current.value ? email.current.value : "",
+      address: {
+        street: address.street.current.value,
+        city: address.city.current.value,
+        zipcode: address.zipcode.current.value,
+      },
     };
-    axios.post("  http://localhost:4000/fruits", payload).then(() => {
+
+    axios.post("http://localhost:4000/fruits", payload).then(() => {
       navigate("/");
     });
   };
+
   return (
     <>
       <legend>Create</legend>
@@ -32,16 +42,24 @@ function AddFruit() {
           <Form.Control type="text" ref={name} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formusername">
-          <Form.Label>username</Form.Label>
+          <Form.Label>Username</Form.Label>
           <Form.Control type="text" ref={username} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formemail">
-          <Form.Label>email</Form.Label>
+          <Form.Label>Email</Form.Label>
           <Form.Control type="email" ref={email} />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formImageUrl">
-          <Form.Label>ImageUrl</Form.Label>
-          <Form.Control type="text" ref={imageUrl} />
+        <Form.Group className="mb-3" controlId="formaddressstreet">
+          <Form.Label>Address Street</Form.Label>
+          <Form.Control type="text" ref={address.street} />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formaddresscity">
+          <Form.Label>Address City</Form.Label>
+          <Form.Control type="text" ref={address.city} />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formaddresszipcode">
+          <Form.Label>Address zipcode</Form.Label>
+          <Form.Control type="text" ref={address.zipcode} />
         </Form.Group>
         <Button variant="primary" type="button" onClick={addFruitHandler}>
           Add
@@ -50,4 +68,5 @@ function AddFruit() {
     </>
   );
 }
+
 export default AddFruit;

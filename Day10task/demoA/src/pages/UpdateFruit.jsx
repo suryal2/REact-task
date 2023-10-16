@@ -8,30 +8,39 @@ function UpdateFruit() {
   const name = useRef("");
   const username = useRef("");
   const email = useRef("");
-  const imageUrl = useRef("");
- const address=useRef("");
+  // const imageUrl = useRef("");
+  const address = {
+    street: useRef(""),
+    city: useRef(""),
+    zipcode:useRef(""),
+  };
 
   const { id } = useParams();
  
   const navigate = useNavigate();
  
   useEffect(() => {
-    axios.get(`  http://localhost:4000/fruits/${id}`).then((response) => {
+    axios.get(`http://localhost:4000/fruits/${id}`).then((response) => {
       name.current.value = response.data.name;
       username.current.value = response.data.username;
       email.current.value = response.data.email;
-      imageUrl.current.value = response.data.imageUrl;
-      address.current.value = response.data.address; 
+      address.street.current.value = response.data.address.street;
+      address.city.current.value = response.data.address.city;
+      address.zipcode.current.value = response.data.address.city;
     });
-  }, []);
+  }, [id]);
  
   const updateFruitHandler = () => {
     var payload = {
       name: name.current.value,
       username: username.current.value  ,
       email: email.current.value  ,
-      imageUrl: imageUrl.current.value,
-      address: address .current.value,
+       
+      address: {
+        street: address.street.current.value,
+        city: address.city.current.value,
+        zipcode: address.zipcode.current.value,
+      }
     };
  
     axios.put(`  http://localhost:4000/fruits/${id}`, payload).then((response) => {
@@ -55,13 +64,18 @@ function UpdateFruit() {
           <Form.Label>email</Form.Label>
           <Form.Control type="email" ref={email} />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formaddress">
-          <Form.Label>address</Form.Label>
-          <Form.Control type=" address " ref={ address } />
+        
+        <Form.Group className="mb-3" controlId="formaddressstreet">
+          <Form.Label>Address Street</Form.Label>
+          <Form.Control type="text" ref={address.street} />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formImageUrl">
-          <Form.Label>ImageUrl</Form.Label>
-          <Form.Control type="text" ref={imageUrl} />
+        <Form.Group className="mb-3" controlId="formaddresscity">
+          <Form.Label>Address City</Form.Label>
+          <Form.Control type="text" ref={address.city} />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formaddresszipcode">
+          <Form.Label>Address zipcode</Form.Label>
+          <Form.Control type="text" ref={address.zipcode} />
         </Form.Group>
         <Button variant="primary" type="button" onClick={updateFruitHandler}>
           Update

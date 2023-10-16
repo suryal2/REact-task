@@ -10,3 +10,13 @@
  
   }
  
+  .cardbody{
+background-color: rgb(175, 214, 175);
+  }
+  .flex{
+    display: flex;
+
+  }
+  .btn-a{
+    background-color: rgb(175, 191, 151);
+  }
