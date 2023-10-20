@@ -1,3 +1,5 @@
+code only run in the localhost so follow the insection given below
+
 In Terminal ,
 run First terminal for localhost - there are two commants for install : 1)  npm install -g json-server ,2)npm run json-server.
   And open second terminal run the code - so type the comment for run runing : npm run dev (In second terminal).
