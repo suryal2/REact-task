@@ -1,0 +1,26 @@
+ .mt-2{
+ height: 400px;
+ width:100%;
+  
+ }
+ img{
+    height:300px;
+    width:100%;
+    
+ 
+  }
+ 
+  #cardbody{
+background-color: rgb(197, 219, 236);
+
+  }
+  .flex{
+    display: flex;
+   
+   
+
+  }
+  #batn{
+    color: rgb(30, 77, 104);
+     margin-top: 20px;
+  }
