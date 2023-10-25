@@ -1,0 +1,22 @@
+ .mt-2{
+ height: 400px;
+ width:100%;
+  
+ }
+ img{
+    height:300px;
+    width:100%;
+    
+ 
+  }
+ 
+  .cardbody{
+background-color: rgb(175, 214, 175);
+  }
+  .flex{
+    display: flex;
+
+  }
+  .btn-a{
+    background-color: rgb(175, 191, 151);
+  }
